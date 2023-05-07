@@ -5,24 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" async></script>
     <title>Kalkulator</title>
 </head>
 <body>
     <main>
         <div>
-            <input type="number" name="firstInput" id="firstInput">    
-            <input type="number" name="secondInput" id="secondInput">
+            <form >
+                <input type="number" name="firstInput" required id="firstInput">    
+                <input type="number" name="secondInput" id="secondInput" required>
+    
+            </form>
+           
+            <button id="plusBtn">+</button>
+            <button id="minusBtn">-</button>
+            <button id="multipleBtn">*</button>
+            <button id="divideBtn">/</button>
 
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
+            <button id="resetBtn">Reset</button>
 
-            <button>Reset</button>
+            <div id="resultCalculator"></div>
         </div>
         <div>
-            
+
         </div>
     </main>
 </body>
