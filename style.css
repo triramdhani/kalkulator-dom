@@ -1,0 +1,62 @@
+main {
+    max-width: 400px;
+    margin: 0 auto;
+}
+input {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
+form {
+    display: flex;
+}
+
+
+#resultCalculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    border: 0.5px solid black;
+    margin-left: 10px;
+}
+
+#btn {
+    margin: 10px;
+    text-align: center;
+}
+#btnOps {
+    margin-bottom: 5px;
+}
+#plusBtn, #minusBtn, #multipleBtn , #divideBtn {
+    background-color: whitesmoke;
+    cursor: pointer;
+    border: 1px solid blue
+    ;
+    width: 40px;
+    font-size: 16px;
+}
+#resetBtn {
+    width: 173px;
+    cursor: pointer;
+}
+
+#operationSign {
+    text-align: center;
+}
+span {
+    margin: 0px 5px 0px 5px;
+    font-size: 20px;
+    color: wheat;
+    font-weight: bolder;
+}
+h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}

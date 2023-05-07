@@ -10,25 +10,51 @@
 </head>
 <body>
     <main>
+        <h1>Simple Calculator</h1>
         <div>
             <form >
-                <input type="number" name="firstInput" required id="firstInput">    
-                <input type="number" name="secondInput" id="secondInput" required>
-    
+                <div>
+                    <input placeholder="Input Number here" type="number" name="firstInput" required id="firstInput">    
+                    <div id="operationSign">
+                        <span id="plus">
+                            +
+                    </span>
+                    <span id="minus">
+                        -
+                    </span>
+                    <span id="multiple">
+                        X
+                    </span>
+                    <span id="divide">
+                        /
+                    </span>
+                    </div>
+                <input placeholder="Input Number here" type="number" name="secondInput" id="secondInput" required>
+                </div>
+                <div id="resultCalculator">
+
+                </div>
             </form>
-           
-            <button id="plusBtn">+</button>
-            <button id="minusBtn">-</button>
-            <button id="multipleBtn">*</button>
-            <button id="divideBtn">/</button>
+            
+            <div id="btn">
+                <div id="btnOps">
+                    <button id="plusBtn">+</button>
+                    <button id="minusBtn">-</button>
+                    
+                    <button id="multipleBtn">*</button>
+                    <button id="divideBtn">/</button>
+                </div>
+                
+                <button id="resetBtn">Reset</button>
+            </div>
 
-            <button id="resetBtn">Reset</button>
-
-            <div id="resultCalculator"></div>
         </div>
         <div>
 
         </div>
     </main>
+    <footer>
+        by Tri Ramdhani
+    </footer>
 </body>
 </html>

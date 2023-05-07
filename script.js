@@ -17,6 +17,7 @@ let divideButton = document.querySelector('#divideBtn')
 // add event listener for button
 plusButton.addEventListener('click', ()=> {
     renderResult('+')
+    changeOperationSign('+')
 })
 minusButton.addEventListener('click', ()=>{
    renderResult('-')
@@ -36,8 +37,16 @@ resetButton.addEventListener('click', ()=> {
 function resetInputFields( ){
     document.getElementById('firstInput').value = ''
     document.getElementById('secondInput').value = ''
+    document.getElementById('resultCalculator').innerHTML = ''
+    resetOperationSignColor()
 }
 
+function resetOperationSignColor(){
+    document.querySelector('#plus').style.color = 'wheat'
+    document.querySelector('#minus').style.color = 'wheat'
+    document.querySelector('#multiple').style.color = 'wheat'
+    document.querySelector('#divide').style.color = 'wheat'
+}
 
 // callback function for calc operation
 function renderResult(calcOperation){
@@ -58,6 +67,17 @@ function renderResult(calcOperation){
         targetElement.innerHTML = hasil
     }
 
+    // reset color sign
+    resetOperationSignColor()
+    if (calcOperation === '+') {
+        document.querySelector('#plus').style.color = 'blue'
+    } else if(calcOperation === '-'){
+        document.querySelector('#minus').style.color = 'blue'
+    } else if(calcOperation === '*'){
+        document.querySelector('#multiple').style.color = 'blue'
+    }else if(calcOperation === '/'){
+        document.querySelector('#divide').style.color = 'blue'
+    }
 }
 
 // function for calcculate
