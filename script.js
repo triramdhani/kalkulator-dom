@@ -16,17 +16,16 @@ let divideButton = document.querySelector('#divideBtn')
 
 // add event listener for button
 plusButton.addEventListener('click', ()=> {
-    renderResult('+')
-    changeOperationSign('+')
+    renderResult(operation.plus)
 })
 minusButton.addEventListener('click', ()=>{
-   renderResult('-')
+   renderResult(operation.minus)
 })
 multipleButton.addEventListener('click', () => {
-    renderResult('*')
+    renderResult(operation.multiple)
 })
 divideButton.addEventListener('click', ()=> {
-    renderResult('/')
+    renderResult(operation.devide)
 })
 resetButton.addEventListener('click', ()=> {
     resetInputFields()
@@ -69,13 +68,13 @@ function renderResult(calcOperation){
 
     // reset color sign
     resetOperationSignColor()
-    if (calcOperation === '+') {
+    if (calcOperation === operation.plus) {
         document.querySelector('#plus').style.color = 'blue'
-    } else if(calcOperation === '-'){
+    } else if(calcOperation === operation.minus){
         document.querySelector('#minus').style.color = 'blue'
-    } else if(calcOperation === '*'){
+    } else if(calcOperation === operation.multiple){
         document.querySelector('#multiple').style.color = 'blue'
-    }else if(calcOperation === '/'){
+    }else if(calcOperation === operation.devide){
         document.querySelector('#divide').style.color = 'blue'
     }
 }
@@ -106,5 +105,6 @@ function calc(firstNumber, secondNumber , operation)  {
         default:
             break;
     }
-    return result.toFixed(6) // decimal 6
+
+    return result // decimal 6
 }
