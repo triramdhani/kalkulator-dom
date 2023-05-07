@@ -106,5 +106,5 @@ function calc(firstNumber, secondNumber , operation)  {
         default:
             break;
     }
-    return result
+    return result.toFixed(6) // decimal 6
 }
